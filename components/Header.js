@@ -2,13 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 import Search from '../assets/svg/search'
 const styles = {
-   header : 'bg-[#17171A] text-white h-20 flex gap-[100px] w-full p-[30px]',
+   header : `bg-[#17171A] text-white h-20 flex gap-[100px] w-full p-[30px]`,
    headerWrapper : `flex justify-center h-full max-w-screen-xl mx-auto px-4`,
-   nav: 'flex justif-center items-center gap-[20px]',
-   navItem : 'relative mr-1 cursor-pointer hover:opacity-60',
-   badge :' rounded-full bg-blue-600 h-1 w-1 absolute bottom-5 right-0 top-1 ring-4',
-   inputcontainer : 'flex items-center justify-center p-2 rounded bg-[#171924]',
-   input:'bg-transparent outline-none text-white w-70 ml-3 ',
+   nav: `flex justif-center items-center gap-[20px]`,
+   navItem : `relative mr-1 cursor-pointer hover:opacity-60`,
+   badge :` rounded-full bg-blue-600 h-1 w-1 absolute bottom-5 right-0 top-1 ring-4`,
+   inputcontainer : `flex items-center justify-center p-2 rounded bg-[#171924]`,
+   input:`bg-transparent outline-none text-white w-70 ml-3`,
 }
 const Header = () => {
   return (
@@ -21,7 +21,7 @@ const Header = () => {
     />
 
   <div className={styles.headerWrapper}>
-        <div className={styles.nav}>
+        <nav className={styles.nav}>
           <div className= { styles.navItem}>
             <div className={styles.navLink} > Cryptocurrencies </div>
             <div className={styles.badge}/>
@@ -58,12 +58,13 @@ const Header = () => {
           <div className= { styles.navItem}>
             <div className={styles.navLink} > Learn  </div>
           </div>
+        </nav> 
 
       </div>
         <div className='flex items-centre'>
           {/* connect button */}
           <div className={styles.inputcontainer}>
-           <Search />
+            <Search /> 
             <input className={styles.input} placeholder ='Search'/>
           </div>
         </div>
@@ -72,7 +73,7 @@ const Header = () => {
 
 
      </div>
-    </div>
+    
   )
 }
 
